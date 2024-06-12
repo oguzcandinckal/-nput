@@ -3,63 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelişmiş Email Input</title>
+    <title>Email Input</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-        }
-        
-        .input-container {
-            position: relative;
-            width: 300px;
-        }
+     body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
 
-        .email-input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #ccc;
-            border-radius: 25px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s ease-in-out;
-        }
+.input-container {
+    position: relative;
+    width: 422px; /* Hug width */
+    height: 52px; /* Hug height */
+    top: 20px;
+    left: 20px;
+    padding: 16px 369px 16px 16px; /* Padding values */
+    gap: 10px; /* Gap between elements */
+    border-radius: 30px 0px 0px 0px; /* Border radius */
+    border: 1px solid #ccc; /* Border style (assuming you want a visible border) */
+    opacity: 1; /* Set opacity to 1 for visibility */
+}
 
-        .email-input:focus {
-            border-color: #007bff;
-        }
+.email-input {
+    width: calc(100% - 36px); /* Adjust width considering padding */
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 5px;
+    background-color: transparent;
+}
 
-        .input-label {
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #aaa;
-            transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out;
-        }
+.input-label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #aaa;
+    transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
 
-        .email-input:focus + .input-label,
-        .email-input:not(:placeholder-shown) + .input-label {
-            top: 10px;
-            font-size: 12px;
-            color: #007bff;
-        }
+.email-input:focus + .input-label,
+.email-input:not(:placeholder-shown) + .input-label {
+    top: 10px;
+    font-size: 12px;
+    color: #007bff;
+}
 
-        .icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #aaa;
-            font-size: 18px;
-            pointer-events: none;
-        }
+.icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+    pointer-events: none;
+}
+
     </style>
 </head>
 <body>

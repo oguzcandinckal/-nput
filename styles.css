@@ -10,27 +10,31 @@ body {
 
 .input-container {
     position: relative;
-    width: 300px;
+    width: 422px; /* Hug width */
+    height: 52px; /* Hug height */
+    top: 20px;
+    left: 20px;
+    padding: 16px 369px 16px 16px; /* Padding values */
+    gap: 10px; /* Gap between elements */
+    border-radius: 30px 0px 0px 0px; /* Border radius */
+    border: 1px solid #ccc; /* Border style (assuming you want a visible border) */
+    opacity: 1; /* Set opacity to 1 for visibility */
 }
 
 .email-input {
-    width: 100%;
-    padding: 15px 20px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    font-size: 16px;
+    width: calc(100% - 36px); /* Adjust width considering padding */
+    height: 100%;
+    border: none;
     outline: none;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.email-input:focus {
-    border-color: #007bff;
+    font-size: 16px;
+    padding-left: 5px;
+    background-color: transparent;
 }
 
 .input-label {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 16px;
     transform: translateY(-50%);
     pointer-events: none;
     color: #aaa;
@@ -46,7 +50,7 @@ body {
 
 .icon {
     position: absolute;
-    right: 20px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
     color: #aaa;
